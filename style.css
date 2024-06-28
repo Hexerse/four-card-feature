@@ -1,0 +1,215 @@
+:root{
+    --clr-red-primary: hsl(0, 78%, 62%);
+    --clr-cyan-primary: hsl(180, 62%, 55%);
+    --clr-orange-primary:  hsl(34, 97%, 64%);
+    --clr-blue-primary: hsl(212, 86%, 64%);
+
+    --clr-darkblue-secondary: hsl(234, 12%, 34%);
+    --clr-grayishblue-secondary: hsl(229, 6%, 66%);
+    --clr-lightgray-secondary: hsl(0, 0%, 98%);
+
+    --font-size: .9375rem;
+
+    --ff-poppins: "Poppins", sans-serif;
+    --fw-light: 200;
+    --fw-medium: 400;
+    --fw-bold: 600;
+
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 75rem;
+  max-height: 50em;
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-wrap: wrap;
+}
+
+.motto-top{
+  font-weight: var(--fw-light);
+  color: var(--clr-grayishblue-secondary);
+}
+
+.motto-bottom{
+  font-weight: var(--fw-bold);
+  color: var(--clr-darkblue-secondary);
+}
+
+.sentence{
+  color: var(--clr-grayishblue-secondary);
+  text-align: center;
+  padding: 1rem 1rem;
+  padding-bottom: 4rem;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: var(--ff-poppins);
+}
+
+.supervisor{
+    grid-area: supervisor;
+    box-shadow: 0 1px 20px -10px black;
+    border-radius: 5px;
+    border-top: 3px solid var(--clr-cyan-primary);
+
+    min-width: 17.5rem;
+    max-width: 22.5rem;
+    min-height: 15rem;
+
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    justify-self:left;
+}
+
+.teambuilder{
+    grid-area:teambuilder;
+    box-shadow: 0 1px 20px -10px black;
+    margin-bottom: 2rem;
+
+    border-radius: 5px;
+    border-top: 3px solid var(--clr-red-primary);
+    
+    min-width: 17.5rem;
+    max-width: 22.5rem;
+    min-height: 15rem;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+
+}
+
+.karma{
+    grid-area: karma;
+    box-shadow: 0 1px 20px -10px black;
+    margin-bottom: 2rem;
+
+    border-radius: 5px;
+    border-top: 3px solid var(--clr-orange-primary);
+
+    min-width: 17.5rem;
+    max-width: 22.5rem;
+    min-height: 15rem;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    justify-self:right;
+}
+
+.calculator{
+    grid-area: calculator;
+    box-shadow: 0 1px 20px -10px black;
+    margin-bottom: 2rem;
+
+    border-radius: 5px;
+    border-top: 3px solid var(--clr-blue-primary);
+
+    min-width: 17.5rem;
+    max-width: 22.5rem;
+    min-height: 15rem;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.headings{
+    font-family: var(--ff-poppins);
+    font-weight: var(--fw-bold);
+    color: var(--clr-darkblue-secondary);
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    
+}
+
+.description{
+    margin-left: 2rem;
+    color: var(--clr-grayishblue-secondary);
+    font-family: var(--ff-poppins);
+    font-size: 0.9rem;
+    padding-right: 1.5rem;
+    text-wrap: wrap;
+}
+
+.svg{
+  margin-left: 17rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 400px){
+  .motto{
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1200px){
+  .supervisor{
+    transform: translateY(50%);
+  }
+
+  .karma{
+    transform: translateY(50%);
+  }
+}
